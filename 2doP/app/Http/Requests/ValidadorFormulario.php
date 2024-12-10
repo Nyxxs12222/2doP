@@ -22,9 +22,9 @@ class ValidadorFormulario extends FormRequest
     public function rules(): array
     {
         return [
-            'correo'=>'required',
-            'contraseña'=>'required',
-            'edad'=>'required',
+            'correo' => 'required|email|max:255',
+            'contraseña' => 'required|string|min:8|max:20|regex:/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/',
+            'edad' => 'required|integer|min:18|max:99',
         ];
     }
 }

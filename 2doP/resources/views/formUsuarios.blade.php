@@ -25,19 +25,19 @@
             @csrf
             <div class="mb-3">
                 <label  class="form-label">Correo: </label>
-                <input type="email" class="form-control" name="correo">
+                <input type="text" class="form-control" name="correo" value="{{ old('correo') }}">
                 <small class="fts-italic text-danger">{{ $errors->first('correo') }}</small>
             </div>
 
             <div class="mb-3">
                 <label class="form-label">Contraseña: </label>
-                <input type="text" class="form-control" name="contraseña">
+                <input type="text" class="form-control" name="contraseña" value="{{ old('contraseña') }}">
                 <small class="fts-italic text-danger">{{ $errors->first('contraseña') }}</small>
             </div>                
 
             <div class="mb-3">
                 <label  class="form-label">Edad: </label>
-                <input type="text" class="form-control" name="edad">
+                <input type="text" class="form-control" name="edad" value="{{ old('edad') }}">
                 <small class="fts-italic text-danger">{{ $errors->first('edad') }}</small>
             </div>
             <button type="submit" class="btn btn-danger "> Guardar Usuario</button>
