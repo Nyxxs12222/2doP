@@ -12,7 +12,7 @@
     @session('exito')
         <script>
             Swal.fire({
-                title: "¡Buen trabajo!",
+                title: "¡{{ __('Buen trabajo') }}!",
                 text: "{{ session('exito') }}",
                 icon: "success"
             });
