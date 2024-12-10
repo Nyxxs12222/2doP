@@ -19,28 +19,28 @@
         </script>
     @endsession
     
-    <h1 class="text-center text-primary mt-5 mb-4">Registro de usuarios</h1>
+    <h1 class="text-center text-primary mt-5 mb-4">{{ __('Registro de usuarios') }}</h1>
     <div class="container  col-md-4">
         <form action="{{ route('postForm') }}" method="POST">
             @csrf
             <div class="mb-3">
-                <label  class="form-label">Correo: </label>
+                <label  class="form-label">{{ __('Correo:') }}</label>
                 <input type="text" class="form-control" name="correo" value="{{ old('correo') }}">
                 <small class="fts-italic text-danger">{{ $errors->first('correo') }}</small>
             </div>
 
             <div class="mb-3">
-                <label class="form-label">Contraseña: </label>
+                <label class="form-label">{{ __('Contraseña:') }}</label>
                 <input type="text" class="form-control" name="contraseña" value="{{ old('contraseña') }}">
                 <small class="fts-italic text-danger">{{ $errors->first('contraseña') }}</small>
             </div>                
 
             <div class="mb-3">
-                <label  class="form-label">Edad: </label>
+                <label  class="form-label">{{ __('Edad:') }}</label>
                 <input type="text" class="form-control" name="edad" value="{{ old('edad') }}">
                 <small class="fts-italic text-danger">{{ $errors->first('edad') }}</small>
             </div>
-            <button type="submit" class="btn btn-danger "> Guardar Usuario</button>
+            <button type="submit" class="btn btn-danger ">{{ __('Guardar Usuario') }}</button>
         </form>
     </div>
 </body>
