@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\controlForm;
 
-Route::get('/', function () {
-    return view('formUsuarios');
-});
+Route::get('/', [controlForm::class, 'create'])->name('getForm');
+Route::post('/enviarForm', [controlForm::class, 'store'])->name('postForm');
+
